@@ -33,3 +33,18 @@ idIntermediaria tinyint primary key IDENTITY (1,1),
 idHabilidades tinyint foreign key references Habilidades (idHabilidades),
 idClasse tinyint foreign key references Classe (idClasse)
 );
+
+CREATE TABLE Usuario (
+	idUsuario SMALLINT PRIMARY KEY IDENTITY,
+	idTipoUsuario SMALLINT FOREIGN KEY REFERENCES TipoUsuario(idTipoUsuario),
+	email VARCHAR(50) NOT NULL UNIQUE,
+	senha VARCHAR(30) NOT NULL
+);
+
+drop table TipoUsuario
+
+
+CREATE TABLE TipoUsuario (
+	idTipoUsuario SMALLINT PRIMARY KEY IDENTITY,
+	tipoUsuario VARCHAR(20) NOT NULL
+);

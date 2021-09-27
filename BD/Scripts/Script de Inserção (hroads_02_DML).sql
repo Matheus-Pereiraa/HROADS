@@ -75,13 +75,10 @@ update Personagens
 set nomePer = 'fer7'
 where idPersonagens = 7
 
+INSERT INTO Usuario(idTipoUsuario, email, senha)
+VALUES (1, 'ademir@adm.com', 'adm321'), (2, 'usuario@usuario.com', 'usuario123');
+GO
 
-personagem join classe join intermediaria join habilidades
-personagem join classe join intermediaria join habilidades
-personagem join classe join intermediaria join habilidades
-personagem join classe join intermediaria join habilidades
-personagem join classe join intermediaria join habilidades
-personagem join classe join intermediaria join habilidades
-personagem join classe join intermediaria join habilidades
-personagem join classe join intermediaria join habilidades
-personagem join classe join intermediaria join habilidades
+INSERT INTO	TipoUsuario (tipoUsuario)
+VALUES ('administrador'), ('comum');
+GO
